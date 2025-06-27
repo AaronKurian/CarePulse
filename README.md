@@ -58,8 +58,8 @@ And many more, including code architecture and reusability.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/AaronKurian/carepulse.git
-   cd carepulse
+   git clone https://github.com/AaronKurian/CarePulse.git
+   cd CarePulse
    ```
 
 2. **Install dependencies**
