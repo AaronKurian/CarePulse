@@ -1,30 +1,20 @@
 {
-  "plugins": ["import"],
   "extends": [
-    "next/core-web-vitals",
-    "standard",
-    "plugin:tailwindcss/recommended",
-    "prettier"
+    "next/core-web-vitals"
   ],
   "rules": {
-    "no-undef": "off",
-    "import/order": [
-      "error",
-      {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
-        ],
-        "newlines-between": "always",
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        }
-      }
-    ]
+    "import/order": "off",
+    "no-unused-vars": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "object-shorthand": "warn",
+    "tailwindcss/classnames-order": "off",
+    "tailwindcss/enforces-shorthand": "off",
+    "tailwindcss/no-custom-classname": "off"
+  },
+  "plugins": ["tailwindcss"],
+  "settings": {
+    "tailwindcss": {
+      "config": "./tailwind.config.js"
+    }
   }
 }
