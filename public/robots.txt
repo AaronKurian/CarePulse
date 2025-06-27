@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow sensitive areas
+Disallow: /admin
+Disallow: /patients/*/register
+Disallow: /patients/*/new-appointment
+
+# Sitemap
+Sitemap: https://your-domain.com/sitemap.xml
