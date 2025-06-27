@@ -10,9 +10,6 @@ const nextConfig = {
     // your project have type errors.
     ignoreBuildErrors: false,
   },
-  experimental: {
-    instrumentationHook: false,
-  },
 };
 
 export default nextConfig;
