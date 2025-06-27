@@ -4,7 +4,7 @@ A modern healthcare appointment management system built with Next.js and Supabas
 
 ## 🌐 Live Demo
 
-**Deployed on Vercel:** [View Live Application](https://your-app-url.vercel.app)
+**Deployed on Vercel:** [View Live Application](https://carepulse-lime-mu.vercel.app/)
 
 ## 📋 Table of Contents
 
