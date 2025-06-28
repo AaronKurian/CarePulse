@@ -22,8 +22,8 @@ import "react-phone-number-input/style.css";
 import CustomFormField, { FormFieldType } from "../CustomFormField";
 import { FileUploader } from "../FileUploader";
 import SubmitButton from "../SubmitButton";
-import userimg from "@/assets/icons/user.svg";
-import email from "@/assets/icons/email.svg";
+import userimg from "@/public/assets/icons/user.svg";
+import email from "@/public/assets/icons/email.svg";
 
 const RegisterForm = ({ user }: { user: User }) => {
   const router = useRouter();
