@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Button } from "./ui/button";
+import loader from "@/public/assets/icons/loader.svg"
 
 interface ButtonProps {
   isLoading: boolean;
@@ -18,7 +19,7 @@ const SubmitButton = ({ isLoading, className, children }: ButtonProps) => {
       {isLoading ? (
         <div className="flex items-center gap-4">
           <Image
-            src="/assets/icons/loader.svg"
+            src={loader}
             alt="loader"
             width={24}
             height={24}

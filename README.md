@@ -58,7 +58,7 @@ And many more, including code architecture and reusability.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/AaronKurian/CarePulse.git
+   git clone https://github.com/your-user-name/CarePulse.git
    cd CarePulse
    ```
 

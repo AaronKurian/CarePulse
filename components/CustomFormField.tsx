@@ -1,10 +1,8 @@
-/* eslint-disable no-unused-vars */
 import { E164Number } from "libphonenumber-js/core";
 import Image from "next/image";
 import ReactDatePicker from "react-datepicker";
 import { Control } from "react-hook-form";
 import PhoneInput from "react-phone-number-input";
-
 import { Checkbox } from "./ui/checkbox";
 import {
   FormControl,
@@ -16,6 +14,7 @@ import {
 import { Input } from "./ui/input";
 import { Select, SelectContent, SelectTrigger, SelectValue } from "./ui/select";
 import { Textarea } from "./ui/textarea";
+import calendar from "@/public/assets/icons/calendar.svg"
 
 export enum FormFieldType {
   INPUT = "input",
@@ -44,6 +43,7 @@ interface CustomProps {
 
 const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
   switch (props.fieldType) {
+
     case FormFieldType.INPUT:
       return (
         <div className="flex rounded-md border border-dark-500 bg-dark-400">
@@ -65,6 +65,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
           </FormControl>
         </div>
       );
+
     case FormFieldType.TEXTAREA:
       return (
         <FormControl>
@@ -76,6 +77,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
           />
         </FormControl>
       );
+
     case FormFieldType.PHONE_INPUT:
       return (
         <FormControl>
@@ -90,6 +92,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
           />
         </FormControl>
       );
+
     case FormFieldType.CHECKBOX:
       return (
         <FormControl>
@@ -105,11 +108,12 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
           </div>
         </FormControl>
       );
+
     case FormFieldType.DATE_PICKER:
       return (
         <div className="flex rounded-md border border-dark-500 bg-dark-400">
           <Image
-            src="/assets/icons/calendar.svg"
+            src={calendar}
             height={24}
             width={24}
             alt="user"
@@ -127,6 +131,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
           </FormControl>
         </div>
       );
+
     case FormFieldType.SELECT:
       return (
         <FormControl>
@@ -142,6 +147,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
           </Select>
         </FormControl>
       );
+
     case FormFieldType.SKELETON:
       return props.renderSkeleton ? props.renderSkeleton(field) : null;
     default:

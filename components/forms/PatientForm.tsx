@@ -1,15 +1,12 @@
 "use client";
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
 import { Form } from "@/components/ui/form";
 import { createUser, getPatient } from "@/lib/actions/patient.actions";
 import { UserFormValidation } from "@/lib/validation";
-
 import "react-phone-number-input/style.css";
 import CustomFormField, { FormFieldType } from "../CustomFormField";
 import SubmitButton from "../SubmitButton";
@@ -44,14 +41,11 @@ export const PatientForm = () => {
         try {
           const existingPatient = await getPatient(newUser.id);
           if (existingPatient) {
-            // User already registered, redirect to new appointment
             router.push(`/patients/${newUser.id}/new-appointment`);
           } else {
-            // New user, redirect to registration
             router.push(`/patients/${newUser.id}/register`);
           }
         } catch (error) {
-          // If getPatient throws error (patient not found), redirect to registration
           router.push(`/patients/${newUser.id}/register`);
         }
       }

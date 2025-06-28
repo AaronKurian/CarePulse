@@ -6,7 +6,7 @@ import { parseStringify } from "../utils";
 // CREATE USER
 export const createUser = async (user: CreateUserParams) => {
   try {
-    // First check if user already exists in our app_users table
+    // if user already exists
     const { data: existingUser } = await supabaseAdmin
       .from('app_users')
       .select()
@@ -44,9 +44,8 @@ export const createUser = async (user: CreateUserParams) => {
 
     return parseStringify(userData);
   } catch (error: any) {
-    // Handle Supabase auth errors
     if (error?.code === 'email_exists' || error?.message?.includes('email address has already been registered')) {
-      // Get existing user from our app_users table
+      // Get existing user 
       const { data: existingUser } = await supabaseAdmin
         .from('app_users')
         .select()
@@ -90,7 +89,6 @@ export const registerPatient = async ({
     let fileUrl = null;
     let fileId = null;
 
-    // Upload file if provided
     if (identificationDocument) {
       const file = identificationDocument.get("blobFile") as File;
       const fileName = identificationDocument.get("fileName") as string;

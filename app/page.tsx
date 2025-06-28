@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { PatientForm } from "@/components/forms/PatientForm";
 import { PasskeyModal } from "@/components/PasskeyModal";
+import logo from "@/public/assets/icons/logo-full.svg"
+import onboarding from "@/public/assets/images/onboarding-img.png"
+
 
 const Home = ({ searchParams }: SearchParamProps) => {
   const isAdmin = searchParams?.admin === "true";
@@ -15,7 +17,7 @@ const Home = ({ searchParams }: SearchParamProps) => {
         <div className="sub-container max-w-[496px]">
           <Link href="/">
             <Image
-              src="/assets/icons/logo-full.svg"
+              src={logo}
               height={1000}
               width={1000}
               alt="logo"
@@ -29,7 +31,7 @@ const Home = ({ searchParams }: SearchParamProps) => {
             <p className="justify-items-end text-dark-600 xl:text-left">
               © 2025 CarePulse
             </p>
-            <Link href="/?admin=true" className="text-green-500">
+            <Link href="/?admin=true" className="text-green-500 hover:scale-110 transition-transform duration-300">
               Admin
             </Link>
           </div>
@@ -37,7 +39,7 @@ const Home = ({ searchParams }: SearchParamProps) => {
       </section>
 
       <Image
-        src="/assets/images/onboarding-img.png"
+        src={onboarding}
         height={1000}
         width={1000}
         alt="patient"

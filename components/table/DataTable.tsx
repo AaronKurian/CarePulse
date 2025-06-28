@@ -1,5 +1,4 @@
 "use client";
-
 import {
   getPaginationRowModel,
   ColumnDef,
@@ -10,7 +9,6 @@ import {
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { useEffect } from "react";
-
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -21,6 +19,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { decryptKey } from "@/lib/utils";
+import arrow from "@/public/assets/icons/arrow.svg"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -105,7 +104,7 @@ export function DataTable<TData, TValue>({
           className="shad-gray-btn"
         >
           <Image
-            src="/assets/icons/arrow.svg"
+            src={arrow}
             width={24}
             height={24}
             alt="arrow"
@@ -119,7 +118,7 @@ export function DataTable<TData, TValue>({
           className="shad-gray-btn"
         >
           <Image
-            src="/assets/icons/arrow.svg"
+            src={arrow}
             width={24}
             height={24}
             alt="arrow "

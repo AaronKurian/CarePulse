@@ -14,23 +14,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Patient } from "@/types/supabase.types";
 import { formatDateTime } from "@/lib/utils";
-import { 
-  User,
-  CircleUser,
-  Phone, 
-  Mail, 
-  MapPin, 
-  Briefcase, 
-  Calendar,
-  Shield,
-  FileText,
-  AlertTriangle,
-  Pill,
-  Users,
-  History,
-  CreditCard,
-  UserCheck
-} from "lucide-react";
+import { User, CircleUser, Phone, Mail, MapPin, Briefcase, Calendar, Shield, FileText, AlertTriangle, Pill, Users, History, CreditCard, UserCheck} from "lucide-react";
 
 interface PatientDetailsModalProps {
   patient: Patient;
@@ -66,19 +50,14 @@ export const PatientDetailsModal = ({ patient, patientName }: PatientDetailsModa
             </div>
             <div>
               <DialogTitle className="text-24-bold">{patient.name}</DialogTitle>
-              {/* <DialogDescription className="text-16-regular">
-                Patient Registration Details
-              </DialogDescription> */}
             </div>
           </div>
         </DialogHeader>
 
         <div className="grid gap-6 py-4">
-          {/* Personal Information */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-18-bold">
-                {/* <User className="w-5 h-5" /> */}
                 Personal Information
               </CardTitle>
             </CardHeader>
@@ -135,11 +114,9 @@ export const PatientDetailsModal = ({ patient, patientName }: PatientDetailsModa
             </CardContent>
           </Card>
 
-          {/* Contact Information */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-18-bold">
-                {/* <MapPin className="w-5 h-5" /> */}
                 Contact & Address
               </CardTitle>
             </CardHeader>
@@ -172,11 +149,9 @@ export const PatientDetailsModal = ({ patient, patientName }: PatientDetailsModa
             </CardContent>
           </Card>
 
-          {/* Medical Information */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-18-bold">
-                {/* <Heart className="w-5 h-5" /> */}
                 Medical Information
               </CardTitle>
             </CardHeader>
@@ -235,11 +210,9 @@ export const PatientDetailsModal = ({ patient, patientName }: PatientDetailsModa
             </CardContent>
           </Card>
 
-          {/* Insurance Information */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-18-bold">
-                {/* <Shield className="w-5 h-5" /> */}
                 Insurance Information
               </CardTitle>
             </CardHeader>
@@ -262,12 +235,10 @@ export const PatientDetailsModal = ({ patient, patientName }: PatientDetailsModa
             </CardContent>
           </Card>
 
-          {/* Identification */}
           {(patient.identification_type || patient.identification_number) && (
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-18-bold">
-                  {/* <FileText className="w-5 h-5" /> */}
                   Identification
                 </CardTitle>
               </CardHeader>
@@ -323,11 +294,9 @@ export const PatientDetailsModal = ({ patient, patientName }: PatientDetailsModa
             </Card>
           )}
 
-          {/* Registration Info */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-18-bold">
-                {/* <Calendar className="w-5 h-5" /> */}
                 Registration Information
               </CardTitle>
             </CardHeader>

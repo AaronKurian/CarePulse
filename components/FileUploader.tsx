@@ -1,10 +1,9 @@
 "use client";
-
 import Image from "next/image";
 import React, { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
-
 import { convertFileToUrl } from "@/lib/utils";
+import upload from "@/public/assets/icons/upload.svg"
 
 type FileUploaderProps = {
   files: File[] | undefined;
@@ -32,7 +31,7 @@ export const FileUploader = ({ files, onChange }: FileUploaderProps) => {
       ) : (
         <>
           <Image
-            src="/assets/icons/upload.svg"
+            src={upload}
             width={40}
             height={40}
             alt="upload"

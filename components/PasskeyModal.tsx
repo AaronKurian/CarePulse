@@ -1,9 +1,7 @@
 "use client";
-
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-
 import {
   AlertDialog,
   AlertDialogAction,
@@ -19,6 +17,7 @@ import {
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 import { decryptKey, encryptKey } from "@/lib/utils";
+import close from "@/public/assets/icons/close.svg"
 
 export const PasskeyModal = () => {
   const router = useRouter();
@@ -72,7 +71,7 @@ export const PasskeyModal = () => {
           <AlertDialogTitle className="flex items-start justify-between">
             Admin Access Verification
             <Image
-              src="/assets/icons/close.svg"
+              src={close}
               alt="close"
               width={20}
               height={20}

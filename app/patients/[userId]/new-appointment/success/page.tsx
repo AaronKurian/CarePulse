@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { Button } from "@/components/ui/button";
 import { Doctors } from "@/constants";
 import { getAppointment } from "@/lib/actions/appointment.actions";
 import { formatDateTime } from "@/lib/utils";
+import logo from "@/public/assets/icons/logo-full.svg"
+import gif from "@/public/assets/gifs/success.gif"
+import calendar from "@/public/assets/icons/calendar.svg"
+
+
 
 const RequestSuccess = async ({
   searchParams,
@@ -22,7 +26,7 @@ const RequestSuccess = async ({
       <div className="success-img">
         <Link href="/">
           <Image
-            src="/assets/icons/logo-full.svg"
+            src={logo}
             height={1000}
             width={1000}
             alt="logo"
@@ -32,7 +36,7 @@ const RequestSuccess = async ({
 
         <section className="flex flex-col items-center">
           <Image
-            src="/assets/gifs/success.gif"
+            src={gif}
             height={300}
             width={280}
             alt="success"
@@ -59,7 +63,7 @@ const RequestSuccess = async ({
           </div>
           <div className="flex gap-2">
             <Image
-              src="/assets/icons/calendar.svg"
+              src={calendar}
               height={24}
               width={24}
               alt="calendar"
